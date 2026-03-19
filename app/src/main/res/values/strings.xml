@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Supreme Enigma</string>
+    <string name="btn_list_files">List Directory Contents</string>
+    <string name="shizuku_not_running">Shizuku is not running. Please start Shizuku first.</string>
+    <string name="permission_denied">Shizuku permission was denied.</string>
+    <string name="empty_output">No files found.</string>
+    <string name="error_prefix">Error: </string>
+</resources>
