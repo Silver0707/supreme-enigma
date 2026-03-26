@@ -1,0 +1,28 @@
+plugins {
+    id('com.android.library')
+}
+
+android {
+    namespace 'rikka.shizuku'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+}
+
+ext {
+    publishLibrary = true
+    POM_NAME = "Shizuku API"
+    POM_DESCRIPTION = "Shizuku API"
+}
