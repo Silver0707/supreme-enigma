@@ -41,7 +41,7 @@ const val ACTION: String = "<<ACTION_PLACEHOLDER>>"
 class ConfigurationCacheProblemsSummaryTest {
 
     @Test
-    fun `keeps track of unique problems upto maxCollectedProblems`() {
+    fun `keeps track of unique problems up to maxCollectedProblems`() {
         val subject = ConfigurationCacheProblemsSummary(maxCollectedProblems = 3)
 
         // causes for unique problems are collected
