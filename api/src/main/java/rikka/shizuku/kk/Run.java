@@ -19,7 +19,8 @@ public class Run {
     private static final int TRANSACTION_WAIT_FOR = 5;
 
     /**
-     * Runs a shell command using Shizuku's privileged process and waits for it to complete.
+     * Runs a shell command using Shizuku's privileg
+ed process and waits for it to complete.
      *
      * @param binder The Shizuku service binder
      * @param cmd    The command and its arguments
