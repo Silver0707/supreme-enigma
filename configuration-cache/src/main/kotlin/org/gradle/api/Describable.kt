@@ -7,7 +7,7 @@ package org.gradle.api
  * It is intentionally broad so that build-logic sources, tasks, plugins, and other Gradle model
  * objects can all be treated uniformly wherever only a display name is required.
  *
- * @see DisplayName for the narrower interface that additionally provides a capitalized form.
+ * @see org.gradle.internal.DisplayName for the narrower interface that additionally provides a capitalized form.
  */
 interface Describable {
     /**

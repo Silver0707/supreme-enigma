@@ -6,7 +6,8 @@ import org.gradle.api.Describable
  * A [Describable] that additionally provides a capitalized form of its display name.
  *
  * The capitalized form is used when the display name appears at the start of a sentence – for
- * example in [toString] implementations that produce human-readable diagnostic strings.
+ * example in `toString()` implementations of types that hold a [DisplayName] and need to produce
+ * sentence-case diagnostic strings.
  *
  * Prefer accepting [Describable] in APIs that only need the plain name; use [DisplayName] only
  * when the capitalized form is explicitly required (e.g. for sentence-start contexts).
