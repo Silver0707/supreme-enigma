@@ -16,6 +16,7 @@
 
 package org.gradle.internal.cc.impl.problems
 
+import org.gradle.api.Describable
 import org.gradle.internal.Describables
 import org.gradle.internal.code.UserCodeSource
 import org.gradle.internal.configuration.problems.PropertyProblem
@@ -37,6 +38,8 @@ import java.io.File
 const val REPORT_URL: String = "<<REPORT_URL_PLACEHOLDER>>"
 
 const val ACTION: String = "<<ACTION_PLACEHOLDER>>"
+
+private data class SimpleDescribable(override val displayName: String) : Describable
 
 class ConfigurationCacheProblemsSummaryTest {
 
@@ -437,7 +440,7 @@ See the complete report at $REPORT_URL
         PropertyTrace.BuildLogic(UserCodeSource.Script(Describables.of(displayName), null))
 
     private fun buildLogicLocationTrace(displayName: String, lineNumber: Int): PropertyTrace.BuildLogic =
-        PropertyTrace.BuildLogic(Location(Describables.of(displayName), Describables.of(displayName), "/some/path/$displayName", lineNumber))
+        PropertyTrace.BuildLogic(Location(Describables.of(displayName), SimpleDescribable(displayName), "/some/path/$displayName", lineNumber))
 
     private fun checkConsoleText(summary: Summary, expected: String) {
         val reportFile = File("report.html")
