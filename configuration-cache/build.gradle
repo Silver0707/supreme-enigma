@@ -1,0 +1,13 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:33.0.0-jre'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+}
+
+kotlin {
+    jvmToolchain(17)
+}
